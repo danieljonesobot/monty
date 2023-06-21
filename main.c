@@ -1,5 +1,5 @@
 #include "monty.h"
-bus_t bus = {NULL, NULL, NULL, 0};
+ch_t vec = {NULL, NULL, NULL, 0};
 /**
 * main - monty code interpreter
 * @argc: number of arguments
@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
                 exit(EXIT_FAILURE);
         }
         fl = fopen(argv[1], "r");
-        bus.fil = fl;
-        if (!fl)
+        vec.fil = fl;
+        if(!fl)
         {
                 fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
                 exit(EXIT_FAILURE);
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
         {
                 cote = NULL;
                 read_line = _getline(&cote, &size, fl);
-                bus.cont = cote;
+                vec.cont = cote;
                 count++;
                 if (read_line > 0)
                 {

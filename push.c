@@ -1,27 +1,27 @@
 #include "monty.h"
 
 /**
- * f_push - add node to the stack
- * @head: stack head
- * @counter: line_number
- * Return: no return
+ * push_opcodes - adds and new node
+ * @head: head of stack
+ * @counter:number
+ * Return: void 
 */
-void push_opcodes(stack_t **head, unsigned int counter)
+void push_opcodes(stack_t **head, unsigned int cter)
 {
     int n;
     
-    if (!bus.argument || !is_integer(bus.argument))
+    if (!vec.argument || !is_integer(vec.argument))
     {
-        fprintf(stderr, "L%d: usage: push integer\n", counter);
-        fclose(bus.fil);
-        free(bus.cont);
+        fprintf(stderr, "L%d: usage: push integer\n", cter);
+        fclose(vec.fil);
+        free(vec.cont);
         Fstack(*head);
         exit(EXIT_FAILURE);
     }
     
-    n = atoi(bus.argument);
+    n = atoi(vec.argument);
     
-    if (bus.li == 0)
+    if (vec.li == 0)
         node_add(head, n);
     else
         queue_add(head, n);

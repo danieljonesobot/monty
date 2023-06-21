@@ -23,21 +23,21 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 /**
- * struct bus_s - variables -args, file, line content
- * @arg: value
- * @file: pointer to monty file
- * @content: line content
- * @lifi: flag change stack <-> queue
- * Description: carries values through the program
+ * struct ch_s - var 
+ * @argument: val
+ * @fil: pointer
+ * @cont: l c
+ * @li: flag change
+ * Description: takes the values into the program
  */
-typedef struct bus_s
+typedef struct ch_s
 {
 	char *argument;
 	FILE *fil;
 	char *cont;
 	int li;
-}  bus_t;
-extern bus_t bus;
+}  ch_t;
+extern ch_t vec;
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -60,4 +60,5 @@ void Fstack(stack_t *hd);
 void node_add(stack_t **head, int n);
 void queue_add(stack_t **head, int n);
 int exe(char *content, stack_t **stack, unsigned int counter, FILE *file);
+void pint_opcode(stack_t **hd, unsigned int cter);
 #endif 
