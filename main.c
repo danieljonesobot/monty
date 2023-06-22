@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
         char *cote;
         FILE *fl;
         size_t size = 0;
-        ssize_t read_line = 1;
+        ssize_t rdLn = 1;
         stack_t *stk = NULL;
         unsigned int count = 0;
 
@@ -28,13 +28,13 @@ int main(int argc, char *argv[])
                 fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
                 exit(EXIT_FAILURE);
         }
-        while (read_line > 0)
+        while (rdLn > 0)
         {
                 cote = NULL;
-                read_line = _getline(&cote, &size, fl);
+                rdLn = _getline(&cote, &size, fl);
                 vec.cont = cote;
                 count++;
-                if (read_line > 0)
+                if (rdLn > 0)
                 {
                         exe(cote, &stk, count, fl);
                 }
