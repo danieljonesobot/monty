@@ -11,6 +11,7 @@ int exe(char *ctent, stack_t **stk, unsigned int cter, FILE *fe)
 {
 	instruction_t op_S[] = {
 				{"push", push_opcodes}, {"pall", pall_opcodes},{"pint", pint_opcode},
+				{"pop",pop_opcodes},{"swap",swap_opcodes},
 				{NULL, NULL}
 				};
 	unsigned int j = 0;

@@ -61,4 +61,6 @@ void node_add(stack_t **head, int n);
 void queue_add(stack_t **head, int n);
 int exe(char *content, stack_t **stack, unsigned int counter, FILE *file);
 void pint_opcode(stack_t **hd, unsigned int cter);
+void pop_opcodes(stack_t **hd, unsigned int cter);
+void swap_opcodes(stack_t **hd, unsigned int cter);
 #endif 
