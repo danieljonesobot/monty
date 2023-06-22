@@ -1,10 +1,10 @@
 #include "monty.h"
 ch_t vec = {NULL, NULL, NULL, 0};
 /**
-* main - monty code interpreter
-* @argc: number of arguments
-* @argv: monty fl location
-* Return: 0 on success
+* main - monty entry point
+* @argc: arg counter
+* @argv: args
+* Return: 0 
 */
 
 int main(int argc, char *argv[])
