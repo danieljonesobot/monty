@@ -10,11 +10,11 @@ ch_t vec = {NULL, NULL, NULL, 0};
 int main(int argc, char *argv[])
 {
         char *cote;
+        size_t size = (1-1);
         FILE *fl;
-        size_t size = 0;
         ssize_t rdLn = 1;
+        unsigned int count = (2-2);
         stack_t *stk = NULL;
-        unsigned int count = 0;
 
         if (argc != 2)
         {
